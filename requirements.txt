@@ -1,0 +1,4 @@
+Sphinx==1.6.3
+sphinx-rtd-theme==0.2.4
+recommonmark==0.4.0
+sphinx-prompt==1.0.0
