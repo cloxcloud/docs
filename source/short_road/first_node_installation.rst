@@ -1,4 +1,5 @@
-.. _Box0 for Raspberry Pi3: https://mega.nz/#!BiAyFQra!9N4Dq0TKQmOdPdfs9MwvwmhVVlCqLVhkcHrh1AlE0n8
+.. _Box0 for Raspberry Pi3: https://mega.nz/#!8vpmEbaQ!vNlahJQVcBf8D6oKwwjiTqow8_ODq5NlX8CQV5OuIt4
+
 
 
 .. _the_short_road_first_node:
@@ -22,7 +23,7 @@ Please, download the image and follow this short guide.
 
 1.1. Download image
 -------------------------------------------------------------
-Download `Box0 for Raspberry Pi3`_.
+Download `Box0 for Raspberry Pi3`_ and decompress it.
 
 
 1.2. Dump image on a microSD card

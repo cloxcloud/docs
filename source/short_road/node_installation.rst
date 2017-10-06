@@ -1,4 +1,5 @@
-.. _Box99 for Raspberry Pi3: https://mega.nz/#!B35yRJSA!DRS-baUawC34saldqjiQK3PurJcrTIwpIztycCjlfqs
+.. _Box99 for Raspberry Pi3: https://mega.nz/#!o6ZXmZKJ!unlrxbRnciXEOf4OY7zomfWKfqiceGmQygW_BwUgLYY
+
 
 
 .. _the_short_road_new_node:
