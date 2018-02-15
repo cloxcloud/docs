@@ -2,12 +2,12 @@ Welcome to CloX's documentation!
 ================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    Introduction <intro/index>
-   The short road <short_road/index>
-   The not so short road <long_road/index>
+   Guide for Raspberry Pi 3 <rpi3/index>
+   Guide for Pine64 <pine64/index>
 
 
 

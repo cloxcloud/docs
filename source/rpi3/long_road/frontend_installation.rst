@@ -1,13 +1,14 @@
+.. include:: ../vars.rst
 .. _the_not_so_short_road_frontend_installation:
 
 ******************************************
 Front-end installation
 ******************************************
 
-This guide intends to describe the process of installing OpenNebula on a Ubuntu container running armhf architecture. You can download a basic container from `<http://linuxcontainers.org/>`_ image repositories or Ubuntu `<http://ubuntu.org/>`_ images or you can even use the base image provided in `<http://clox.cloud/>`_ and follow the steps provided on this guide.
+This guide intends to describe the process of installing OpenNebula on a Ubuntu container running |architecture| architecture. You can download a basic container from `<http://linuxcontainers.org/>`_ image repositories or Ubuntu `<http://ubuntu.org/>`_ images or you can even use the base image provided in `<http://clox.cloud/>`_ and follow the steps provided on this guide.
 
 .. warning::
-    Please note there is a ready to be deployed container that will save you the trouble of this guide, see :ref:`the_short_road_first_node`. This guide is only intended to show what is inside that container and for those who want to contribute and improve this process.
+    Please note there is a ready to be deployed container that will save you the trouble of this guide, see :ref:`pine64_the_short_road_first_node`. This guide is only intended to show what is inside that container and for those who want to contribute and improve this process.
 
 .. note::
     * Read **Notes** sections attached to some steps, before using the shell
@@ -241,7 +242,7 @@ Under **Virtualization Driver Configuration** add this:
 2.3. Modify OpenNebula's information driver
 -------------------------------------------------
 
-The Raspberry Pi does not have a PCI bus, so Opennebula´s pci.rb script will fail. Let's simply remove it.
+ARM processors left out the PCI bus, so Opennebula´s pci.rb script will fail. Let's simply remove it.
 
 .. prompt:: bash # auto
 
@@ -281,7 +282,7 @@ Enable required units so they will start automatically
 
 .. prompt:: bash # auto
 
-    # systemctl enable opennebula opennebula-sunstone
+    # systemctl enable opennebula opennebula-sunstone opennebula-flow opennebula-gate
 
 Now, start opennebula service to check everything is OK:
 

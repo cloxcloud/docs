@@ -1,10 +1,11 @@
+.. include:: ../vars.rst
 .. _the_not_so_short_road_node_installation:
 
 ==========================================
 Node Installation
 ==========================================
 
-This guide intends to describe the process of creating a compute node based on Raspbian on a Raspberry Pi 3.  You will need a microSD card with at least 4GB and preferably class 10 or better.
+This guide intends to describe the process of creating a compute node based on |distro| on a |SBC_model|.  You will need a microSD card with at least 4GB and preferably class 10 or better.
 
 .. warning::
     Please note that there are images ready to be dumped on a microSD card that will save you the trouble of this guide. This guide is only intended to show what is inside those images and for those who want to contribute and improve this process.
@@ -15,7 +16,7 @@ This guide intends to describe the process of creating a compute node based on R
     * ``(...)`` in code snippets means that could be code before/after the modified lines. That portion of code need to stay unmodified.
 
 
-1. Install Raspbian on the Raspberry Pi
+1. Install |distro| on the |SBC_model|
 =========================================
 
 You can check the steps here `<https://www.raspberrypi.org/documentation/installation/installing-images/>`__.
@@ -39,7 +40,7 @@ Change repositories and upgrade system:
 
 .. prompt:: bash # auto
 
-    # apt install snapd bridge-utils python-pip python-ws4py git ruby genisoimage
+    # apt install snapd bridge-utils python-pip python-ws4py git ruby genisoimage nfs-common
     # pip install idna==2.5
     # pip install pylxd==2.0.5
     # pip install isoparser
@@ -237,7 +238,7 @@ from the nodes to the Front-end, does not ask password:
 4.4. Install VNC server
 -------------------------------------
 
-We compiled and provided it for Raspbian Stretch in our releases. Download it from the latest release and install the
+We compiled and provided it for |distro| |distro_version| in our releases. Download it from the latest release and install the
 required dependencies from repositories.
 
 .. prompt:: bash # auto

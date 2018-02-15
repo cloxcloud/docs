@@ -1,4 +1,5 @@
-.. _the_short_road_NFS_datastore:
+.. include:: ../vars.rst
+.. _rpi3_the_short_road_NFS_datastore:
 
 ******************************************
 NFS Datastore
@@ -7,8 +8,8 @@ NFS Datastore
 This guide intends to describe the process of adding an NFS datastore. 
 
 .. note::
-    This NSF datastore is optional but recommended. If you do not use this datastore and instead keep using the default OpenNebula's datastore which uses ssh as transfer driver the container will start slowly and will not run as smoothly as it should.
-    This datastore will become a bottleneck once your cluster gets big. When this happens you can add more NFS datastores to distribute load (more info here "**LINK OpenNebula guide**" or deploy a SAN if your budget allows it. For the second case Ceph is recommended. It integrates smoothly with OpenNebula and LXDoNe and it has been used on production environments.
+    This NFS datastore is optional but recommended. If you do not use this datastore and instead keep using the default OpenNebula's datastore which uses ssh as transfer driver the container will start slowly and will not run as smoothly as it should.
+    This datastore will become a bottleneck once your cluster gets big. When this happens you can add more NFS datastores to distribute load (more info here `<http://docs.opennebula.org/>`_ or deploy a SAN if your budget allows it. For the second case Ceph is recommended. It integrates smoothly with OpenNebula and LXDoNe and it has been used on production environments.
 
 NFS disks should work fine and there are a lot on the market. You can also use a Linux PC for the NFS export if you do not have one or do not want to use it. Instructions for using NFS disks vary depending the model, you are on your own there, but is really simple generally speaking. Now instructions are provided for using a Linux PC for the share.
 
@@ -67,15 +68,9 @@ Now go to **Storage** --> **Datastores** and click the green button with a plus 
 
 Set a name for the new datastore. Storage backend should be **Filesystem - Shared mode**. Set **Images** as Datastore Type. 
 
-.. image:: ../picts/new_nfs_datastore.png
+.. image:: ../../picts/new_nfs_datastore.png
 
-.. warning::
-    If the session closes unexpectedly, the time and date must be wrong. The problem is that, in order to cut costs, Raspberry left the Real Time Clock (RTC) out when building it, so every time you reboot date and time will be lost. You can add an RTC to the Raspberry Pi, sync it with an NTP server or simply update manually the date. Containers can't modify the system's clock for security issues, so just update the time and date on box0 and the OpenNebula's container will automatically update it. Log in to **box0** and, as root, check and update the time if necessary:
-.. prompt:: bash # auto
-
-    # date
-    # date -s "2 OCT 2006 18:00:00"
-
+.. include:: ../common/clock_fix.rst
 
 
 3. Mount
