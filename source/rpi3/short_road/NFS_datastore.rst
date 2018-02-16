@@ -34,6 +34,7 @@ For Arch Linux:
     # pacman -S nfs-utils
 
 Check Service is running
+
 .. prompt:: bash # auto
 
    # systemctl status nfs-server 
