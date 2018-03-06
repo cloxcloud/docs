@@ -96,7 +96,7 @@ it's not managed by OpenNebula.
     # lxc profile device remove default eth0
 
 
-4. Configure the RPi as a node for OpenNebula
+4. Configure the |SBC_model| as a node for OpenNebula
 ==================================================
 
 4.1. Install OpenNebula node packages and dependencies
