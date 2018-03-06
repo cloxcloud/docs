@@ -3,7 +3,7 @@ CloX Documentation
 
 This is the official repository of CloX's documentation. This
 documentation is live at:
-[http://docs.opennebula.org](http://clox.cloud/docs).
+[http://clox.cloud/docs](http://clox.cloud/docs).
 
 You are encouraged to fork this repo and send us pull requests!
 
